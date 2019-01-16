@@ -32,4 +32,5 @@ ${INPUT_FILE_PATH}：导出类命
 J2OBJC_HOME：官方的下载 j2objc 的路径
 
 ### 特殊说明
-尝试成功
+1. 使用本 demo 需要 注意 J2OBJC_HOME 的路径问题，并修改所有的 J2OBJC_HOME 为 你自己工程中的 相应路径即可
+2.尝试成功
