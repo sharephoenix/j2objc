@@ -1,6 +1,7 @@
 # j2objc
 
-#  学习链接 https://www.jianshu.com/p/2cbe6c2806a4
+#   学习链接 https://www.jianshu.com/p/2cbe6c2806a4
+#   下载 j2objc https://github.com/google/j2objc/releases
 
 ## xcode 工程 mrc 配置文件
 ## 点击Build Rules菜单项，然后点击"+"增加一个编译规则，Process选项选择Java source files，Using选项选择默认的Custom script。
