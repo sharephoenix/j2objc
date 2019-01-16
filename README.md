@@ -1,5 +1,5 @@
 # j2objc
-学习 j2objc
+
 #  学习链接 https://www.jianshu.com/p/2cbe6c2806a4
 
 ## xcode 工程 mrc 配置文件
