@@ -1,4 +1,4 @@
-package com.example.apple.myapplication;
+package com.example.phoenix.myapplication;
 
 import org.junit.Test;
 
