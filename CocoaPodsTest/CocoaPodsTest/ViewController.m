@@ -20,6 +20,10 @@
 
     NSString * name = [Hello getNickName];
     NSLog(@"%@",name);
+    Hello * hello = [Hello new];
+    NSLog(@"%@",hello.getAddress);
+    [hello setAddressWithNSString:@"shanghai"];
+    NSLog(@"%@",hello.getAddress);
 }
 
 
