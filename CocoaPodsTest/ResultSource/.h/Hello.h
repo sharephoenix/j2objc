@@ -16,6 +16,8 @@
 #if !defined (Hello_) && (INCLUDE_ALL_Hello || defined(INCLUDE_Hello))
 #define Hello_
 
+@class JavaLangInteger;
+
 @interface Hello : NSObject
 
 #pragma mark Public
@@ -24,9 +26,13 @@
 
 - (NSString *)getAddress;
 
+- (JavaLangInteger *)getAge;
+
 + (NSString *)getNickName;
 
 - (void)setAddressWithNSString:(NSString *)address;
+
+- (void)setAgeWithJavaLangInteger:(JavaLangInteger *)age;
 
 @end
 
