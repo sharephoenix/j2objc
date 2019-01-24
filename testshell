@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ $1 == "start" ]
+  then   
+  echo "do start"
+  command groups
+  elif [ $1 == "stop" ]
+  then
+  echo "do stop"
+  command group
+  else
+  echo "Please make sure the positon variable is start or stop."
+fi
