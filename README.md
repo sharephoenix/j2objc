@@ -51,4 +51,4 @@ J2OBJC_HOME：官方的下载 j2objc 的路径
     2. 每个脚本对应每一个文件进行 custom compile
 ## example
     https://github.com/sharephoenix/javascriptWeexVue.git
-    中的 OCWeexNative 工程
+    中的 OCWeexNative 工程 v1.0.1component 分支
