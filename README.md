@@ -50,5 +50,6 @@ J2OBJC_HOME：官方的下载 j2objc 的路径
     1. 给 xcode 某些文件添加（.java/.css 等），custom compile
     2. 每个脚本对应每一个文件进行 custom compile
 ## example
-    https://github.com/sharephoenix/javascriptWeexVue.git
+    1. https://github.com/sharephoenix/javascriptWeexVue.git
     中的 OCWeexNative 工程 v1.0.1component 分支
+    2. 有 xxd 将 .css 编译成 .c 文件
