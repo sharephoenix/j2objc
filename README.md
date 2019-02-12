@@ -35,3 +35,20 @@ J2OBJC_HOME：官方的下载 j2objc 的路径
 ### 特殊说明
 1. 使用本 demo 需要 注意 J2OBJC_HOME 的路径问题，并修改所有的 J2OBJC_HOME 为 你自己工程中的 相应路径即可
 2.尝试成功
+
+#   理解 build phases 和 build rule
+##  理解来源
+    https://www.cocoanetics.com/2012/02/xcode-build-rules/
+##  build phases
+    build phases 中，可以添加编译所需要的脚本。
+    可以直接引用脚本，也可以直接 写入脚本语言
+
+![](./image/01.png)
+![](./image/02.png)
+
+##  build rule 
+    1. 给 xcode 某些文件添加（.java/.css 等），custom compile
+    2. 每个脚本对应每一个文件进行 custom compile
+## example
+    https://github.com/sharephoenix/javascriptWeexVue.git
+    中的 OCWeexNative 工程
