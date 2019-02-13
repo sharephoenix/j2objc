@@ -16,7 +16,7 @@ echo ${INPUT_FILE_PATH}
 -sourcepath "$inputpath" \
 -d "$outputpat" \
 --no-package-directories -use-arc --prefix com.example.mango.*=MM \
--g ${inputpath} \
+-g ${inputpath};
 #${basepath}/CocoaPodsTest/ResultSource/${INPUT_FILE_BASE}.h
 #${basepath}/CocoaPodsTest/ResultSource/${INPUT_FILE_BASE}.m
 echo "finished!!!==$?"
