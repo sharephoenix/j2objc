@@ -16,3 +16,4 @@ j2objc -h
 j2objc -d ${resultSource}/oc -sourcepath ${javaSource} --prefixes 'SL' \
 -classpath $J2OBJC/lib/javax-inject.jar \
     `find ${javaSource} -name '*.java'`
+echo "finish"
