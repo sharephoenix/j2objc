@@ -13,6 +13,12 @@
 #endif
 #undef RESTRICT_Hello
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability"
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (Hello_) && (INCLUDE_ALL_Hello || defined(INCLUDE_Hello))
 #define Hello_
 
@@ -26,7 +32,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 - (NSString *)getAddress;
 
@@ -60,4 +66,8 @@ J2OBJC_TYPE_LITERAL_HEADER(Hello)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_Hello")

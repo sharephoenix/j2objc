@@ -13,7 +13,10 @@ echo "start"
 cd /Users/apple/Library/j2objc-2.3/
 j2objc -h
 
-j2objc -d ${resultSource}/oc -sourcepath ${javaSource} --prefixes 'SL' \
+j2objc -d ${resultSource}/oc -sourcepath ${javaSource}  --swift-friendly \
 -classpath $J2OBJC/lib/javax-inject.jar \
     `find ${javaSource} -name '*.java'`
+
+open ${resultSource}/oc
 echo "finish"
+
