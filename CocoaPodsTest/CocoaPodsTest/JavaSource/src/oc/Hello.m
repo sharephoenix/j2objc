@@ -27,35 +27,25 @@ inline JavaUtilStack *Hello_set_stringStack(JavaUtilStack *value);
 static JavaUtilStack *Hello_stringStack;
 J2OBJC_STATIC_FIELD_OBJ(Hello, stringStack, JavaUtilStack *)
 
-#line 1 "/Users/apple/MyClientRemote/j2objc/CocoaPodsTest/CocoaPodsTest/JavaSource/src/Hello.java"
-
-
-#line 3
 @implementation Hello
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-
-#line 3
 - (instancetype)init {
   Hello_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-
-#line 7
 + (NSString *)getNickName {
   return Hello_getNickName();
 }
 
-
-#line 15
 - (NSString *)getAddress {
   return address_;
 }
 
 - (void)setAddressWithNSString:(NSString *)address {
-  self->address_ = address;
+  JreStrongAssign(&self->address_, address);
 }
 
 - (JavaLangInteger *)getAge {
@@ -63,13 +53,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (void)setAgeWithJavaLangInteger:(JavaLangInteger *)age {
-  self->age_ = age;
+  JreStrongAssign(&self->age_, age);
 }
 
-
-#line 33
 + (void)mainWithNSStringArray:(IOSObjectArray *)args {
   Hello_mainWithNSStringArray_(args);
+}
+
+- (void)dealloc {
+  RELEASE_(aaaaaaaaaaaaa_);
+  RELEASE_(address_);
+  RELEASE_(age_);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -106,52 +101,36 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
-
-#line 3
 void Hello_init(Hello *self) {
   NSObject_init(self);
-  self->aaaaaaaaaaaaa_ = @"123123";
-  self->address_ =
-#line 11
-  @"anhui";
-  self->age_ = JavaLangInteger_valueOfWithInt_(
-#line 13
-  12);
+  JreStrongAssign(&self->aaaaaaaaaaaaa_, @"123123");
+  JreStrongAssign(&self->address_, @"anhui");
+  JreStrongAssign(&self->age_, JavaLangInteger_valueOfWithInt_(12));
 }
 
-
-#line 3
 Hello *new_Hello_init() {
   J2OBJC_NEW_IMPL(Hello, init)
 }
 
-
-#line 3
 Hello *create_Hello_init() {
   J2OBJC_CREATE_IMPL(Hello, init)
 }
 
 NSString *Hello_getNickName() {
   Hello_initialize();
-  
-#line 8
   return @"alexluan";
 }
 
-
-#line 33
 void Hello_mainWithNSStringArray_(IOSObjectArray *args) {
   Hello_initialize();
-  
-#line 34
-  Hello_stringStack = new_JavaUtilStack_init();
-  (void) [Hello_stringStack pushWithId:@"1"];
-  (void) [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"2"];
-  (void) [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"3"];
-  (void) [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"4"];
-  (void) [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"5"];
-  (void) [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"6"];
-  (void) [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"7"];
+  JreStrongAssignAndConsume(&Hello_stringStack, new_JavaUtilStack_init());
+  [Hello_stringStack pushWithId:@"1"];
+  [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"2"];
+  [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"3"];
+  [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"4"];
+  [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"5"];
+  [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"6"];
+  [((JavaUtilStack *) nil_chk(Hello_stringStack)) pushWithId:@"7"];
   [((JavaUtilStack *) nil_chk(Hello_stringStack)) removeWithId:@"3"];
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printWithNSString:[((JavaUtilStack *) nil_chk(Hello_stringStack)) lastElement]];
 }
